@@ -37,7 +37,7 @@ class MyHomePage extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
                 child: Text(
-                  'PBP Shop',
+                  'LiteraSync',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
