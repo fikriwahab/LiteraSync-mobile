@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:literasync/menu.dart';
+import 'package:literasync/screens/my_home_page.dart';
+import 'package:literasync/screens/add_item_page.dart';
+import 'package:literasync/screens/item_list_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +19,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: MyHomePage(),
+      routes: {
+        '/addItem': (context) => AddItemPage(), // Hapus const dari sini
+        '/itemList': (context) => ItemListPage(), // Hapus const dari sini
+      },
     );
   }
 }
