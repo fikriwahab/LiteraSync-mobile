@@ -1,4 +1,4 @@
-# Tugas 7 PBP
+# Tugas 8 PBP
 ## 1. Perbedaan antara Navigator.push() dan Navigator.pushReplacement()
 - Navigator.push() digunakan untuk menavigasi ke halaman baru di atas stack navigasi. Halaman sebelumnya tetap ada di stack, yang berarti jika pengguna menekan tombol kembali, mereka akan kembali ke halaman sebelumnya. Contoh Penggunaan: Navigasi dari daftar produk ke detail produk. Pengguna dapat kembali ke daftar produk dengan menekan tombol kembali.
 - Navigator.pushReplacement() digunakan untuk mengganti halaman saat ini dengan halaman baru di stack navigasi. Halaman sebelumnya dihapus dari stack, sehingga ketika pengguna menekan tombol kembali, mereka tidak akan kembali ke halaman sebelumnya. Contoh Penggunaan: Navigasi dari layar login ke beranda setelah login berhasil. Pengguna tidak perlu kembali ke layar login jika menekan tombol kembali.
