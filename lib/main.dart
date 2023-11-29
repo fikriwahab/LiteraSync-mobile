@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:literasync/screens/my_home_page.dart';
 import 'package:literasync/screens/add_item_page.dart';
 import 'package:literasync/screens/item_list_page.dart';
+import 'package:literasync/screens/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,8 +21,9 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(),
       routes: {
-        '/addItem': (context) => AddItemPage(), // Hapus const dari sini
-        '/itemList': (context) => ItemListPage(), // Hapus const dari sini
+        '/addItem': (context) => AddItemPage(),
+        '/itemList': (context) => ItemListPage(), 
+        '/login': (context) => LoginPage(),
       },
     );
   }

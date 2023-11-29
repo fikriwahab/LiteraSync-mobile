@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:literasync/screens/add_item_page.dart'; // Impor AddItemPage
 import 'package:literasync/screens/item_list_page.dart'; // Impor ItemListPage
+import 'package:literasync/screens/login_page.dart';
+import 'package:literasync/screens/register_page.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -52,6 +54,23 @@ class MyHomePage extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context); // Tutup drawer
                 Navigator.push(context, MaterialPageRoute(builder: (context) => ItemListPage()));
+              },
+            ),
+            // Tambahkan ListTile baru untuk login
+            ListTile(
+              leading: Icon(Icons.login),
+              title: Text('Login'),
+              onTap: () {
+                Navigator.pop(context); // Tutup drawer
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.person_add),
+              title: Text('Register'),
+              onTap: () {
+                Navigator.pop(context); // Tutup drawer
+                Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterPage()));
               },
             ),
           ],

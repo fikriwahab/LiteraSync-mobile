@@ -1,3 +1,43 @@
+# Tugas 9 PBP
+## 1. Pengambilan Data JSON Tanpa Model
+Ya, kita bisa mengambil data JSON tanpa membuat model terlebih dahulu. Ini dapat dilakukan dengan mengurai JSON secara langsung ke dalam struktur data Dart seperti Map atau List.
+Perbandingan dengan Membuat Model: Membuat model khusus untuk data JSON biasanya lebih disarankan karena:
+- Ketepatan Data: Model menjamin bahwa data yang diterima sesuai dengan struktur yang diharapkan.
+- Pemeliharaan Kode: Model membuat kode lebih terorganisir dan mudah untuk dikelola.
+- Keamanan Tipe: Dengan model, Anda memanfaatkan fitur keamanan tipe Dart, mengurangi kemungkinan kesalahan runtime.
+
+## 2. Fungsi CookieRequest
+Cookies biasanya digunakan untuk menyimpan informasi sesi seperti token autentikasi.
+
+Pentingnya Bagi Aplikasi Flutter:
+- Pemeliharaan Sesi: Cookies memungkinkan aplikasi Flutter untuk mempertahankan sesi pengguna, seperti tetap login meski aplikasi ditutup.
+- Keamanan: Cookies sering digunakan untuk mengamankan komunikasi antara klien dan server, khususnya dalam autentikasi.
+
+## 3. Mekanisme Pengambilan Data JSON
+- HTTP Request: Aplikasi Flutter mengirim permintaan HTTP ke server (misalnya, Django).
+- Penguraian Respons: Setelah menerima respons dari server, aplikasi mengurai respons JSON menggunakan json.decode.
+- Konversi ke Objek: Data JSON yang diurai kemudian dikonversi ke dalam objek Dart atau model khusus.
+- Tampilkan di UI: Data yang telah dikonversi ditampilkan dalam widget Flutter, seperti ListView atau Text.
+
+## 4. Mekanisme Autentikasi
+- Input Data: Pengguna memasukkan data akun (username dan password) di aplikasi Flutter.
+- Kirim ke Django: Data dikirim ke Django melalui permintaan HTTP.
+- Proses di Django: Django memproses data, melakukan autentikasi, dan mengembalikan respons (biasanya berupa token jika berhasil).
+- Terima dan Simpan Token: Aplikasi Flutter menerima token dan menyimpannya (biasanya dalam SharedPreferences).
+- Navigasi Menu: Setelah autentikasi berhasil, aplikasi navigasi ke menu atau halaman utama.
+
+## 5. Widget yang Digunakan
+- Scaffold: Membuat struktur dasar halaman aplikasi.
+- AppBar: Menampilkan bar judul di atas layar.
+- Drawer: Menyediakan menu samping yang dapat ditarik keluar.
+- ListView: Menampilkan daftar item secara scrollable.
+- ListTile: Menampilkan item dalam daftar dengan judul dan subjudul.
+- TextFormField: Mengambil input teks dari pengguna.
+ElevatedButton: Menampilkan tombol yang menonjol untuk melakukan aksi.
+- Padding: Menambahkan padding di sekitar widget lain.
+- Column: Mengatur widget secara vertikal.
+- Text: Menampilkan teks pada layar.
+
 # Tugas 8 PBP
 ## 1. Perbedaan antara Navigator.push() dan Navigator.pushReplacement()
 - Navigator.push() digunakan untuk menavigasi ke halaman baru di atas stack navigasi. Halaman sebelumnya tetap ada di stack, yang berarti jika pengguna menekan tombol kembali, mereka akan kembali ke halaman sebelumnya. Contoh Penggunaan: Navigasi dari daftar produk ke detail produk. Pengguna dapat kembali ke daftar produk dengan menekan tombol kembali.
@@ -102,7 +142,7 @@ Ketika pengguna menekan tombol 'Save', data dari form disimpan ke variabel lokal
         }
       },
       child: Text('Save'),
-    ),
+    ),  
 ### 5. Menampilkan Data
 Di ItemListPage, saya menampilkan daftar item yang disimpan dengan ListView.
 
